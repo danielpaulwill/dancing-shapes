@@ -6,7 +6,7 @@ function ShapeOne() {
 
   useEffect(() => {
     if (shapeCount === 1) {
-      setShape("square x")
+      setShape("square")
     } else if (shapeCount === 2) {
       setShape("circle")
     } else if (shapeCount === 3) {
@@ -19,7 +19,9 @@ function ShapeOne() {
   }
 
   return (
-    <div className={shape} onClick={handleShapeClick}>
+    <div className='x'>
+      <div className={`${shape} y`} onClick={handleShapeClick}>
+      </div>
     </div>
   );
 }

@@ -250,14 +250,13 @@ html {
 
 .x {
   animation: x 13s linear infinite alternate;
-  animation: y 7s linear infinite alternate;
 }
 
 .y {
   animation: y 7s linear infinite alternate;
 }
 
-/* @keyframes x {
+@keyframes x {
   100% {
     transform: translateX( calc(100vw - #{$size}) );
   }
@@ -267,4 +266,4 @@ html {
   100% {
     transform: translateY( calc(100vh - #{$size}) );
   }
-} */
+}
