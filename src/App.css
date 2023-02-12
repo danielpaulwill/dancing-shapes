@@ -1,5 +1,10 @@
+html {
+  background-color: #000;
+}
+
 .App {
   text-align: center;
+  color: #FFF;
 }
 
 .square {
@@ -11,14 +16,14 @@
 .circle {
   width: 100px;
   height: 100px;
-  background: red;
+  background: blue;
   border-radius: 50%
 }
 
 .oval {
   width: 200px;
   height: 100px;
-  background: red;
+  background: yellow;
   border-radius: 100px / 50px;
 }
 
@@ -27,11 +32,11 @@
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid red;
+  border-bottom: 100px solid green;
 }
 
 .trapezoid {
-  border-bottom: 100px solid red;
+  border-bottom: 100px solid orange;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
   height: 0;
@@ -42,23 +47,23 @@
   width: 150px;
   height: 100px;
   transform: skew(20deg);
-  background: red;
+  background: purple;
 }
 
-.star-five {
+.star {
   margin: 50px 0;
   position: relative;
   display: block;
-  color: red;
+  color: pink;
   width: 0px;
   height: 0px;
   border-right: 100px solid transparent;
-  border-bottom: 70px solid red;
+  border-bottom: 70px solid pink;
   border-left: 100px solid transparent;
   transform: rotate(35deg);
 }
-.star-five:before {
-  border-bottom: 80px solid red;
+.star:before {
+  border-bottom: 80px solid pink;
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   position: absolute;
@@ -70,16 +75,16 @@
   content: '';
   transform: rotate(-35deg);
 }
-.star-five:after {
+.star:after {
   position: absolute;
   display: block;
-  color: red;
+  color: pink;
   top: 3px;
   left: -105px;
   width: 0px;
   height: 0px;
   border-right: 100px solid transparent;
-  border-bottom: 70px solid red;
+  border-bottom: 70px solid pink;
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
   content: '';
@@ -91,7 +96,7 @@
   box-sizing: content-box;
   border-width: 50px 18px 0;
   border-style: solid;
-  border-color: red transparent;
+  border-color: tan transparent;
 }
 .pentagon:before {
   content: "";
@@ -102,7 +107,7 @@
   left: -18px;
   border-width: 0 45px 35px;
   border-style: solid;
-  border-color: transparent transparent red;
+  border-color: transparent transparent tan;
 }
 
 .hexagon {
@@ -186,3 +191,80 @@
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
+
+
+
+
+
+
+/* Spinning for ShapeOne */
+@media (prefers-reduced-motion: no-preference) {
+  .square, .circle, .triangle {
+    animation: one-spin infinite 10s linear;
+  }
+}
+@keyframes one-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Spinning for ShapeTwo */
+@media (prefers-reduced-motion: no-preference) {
+  .oval, .trapezoid, .star {
+    animation: two-spin infinite 8s linear;
+  }
+}
+@keyframes two-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Spinning for ShapeThree */
+@media (prefers-reduced-motion: no-preference) {
+  .pentagon, .heart, .parallelogram {
+    animation: three-spin infinite 12s linear;
+  }
+}
+@keyframes three-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.x {
+  animation: x 13s linear infinite alternate;
+  animation: y 7s linear infinite alternate;
+}
+
+.y {
+  animation: y 7s linear infinite alternate;
+}
+
+/* @keyframes x {
+  100% {
+    transform: translateX( calc(100vw - #{$size}) );
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY( calc(100vh - #{$size}) );
+  }
+} */

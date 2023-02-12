@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react';
 
-function ShapeOne() {
+function ShapeTwo() {
   const [shapeCount, setShapeCount] = useState(1)
   const [shape, setShape] = useState()
 
   useEffect(() => {
     if (shapeCount === 1) {
-      setShape("square x")
+      setShape("oval")
     } else if (shapeCount === 2) {
-      setShape("circle")
+      setShape("trapezoid")
     } else if (shapeCount === 3) {
-      setShape("triangle")
+      setShape("star")
     } else setShapeCount(1)
   }, [shapeCount])
 
@@ -24,4 +24,4 @@ function ShapeOne() {
   );
 }
 
-export default ShapeOne;
+export default ShapeTwo;
