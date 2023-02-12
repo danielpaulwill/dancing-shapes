@@ -24,7 +24,7 @@ function ShapeThree() {
 
   return (
     <div className='threeX' onClick={handleShapeClick}>
-      <img src={shape} className='threeY'></img>
+      <img src={shape} className='threeY'  alt='third shape'></img>
     </div>
   );
 }

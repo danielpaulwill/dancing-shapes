@@ -24,7 +24,7 @@ function ShapeOne() {
 
   return (
     <div className='oneX' onClick={handleShapeClick}>
-      <img src={shape} className='oneY'></img>
+      <img src={shape} className='oneY' alt='first shape'></img>
     </div>
   );
 }

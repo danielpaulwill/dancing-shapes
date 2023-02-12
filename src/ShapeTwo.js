@@ -25,7 +25,7 @@ function ShapeTwo() {
 
   return (
     <div className='twoX' onClick={handleShapeClick}>
-      <img src={shape} className='twoY'></img>
+      <img src={shape} className='twoY' alt='second shape'></img>
     </div>
   );
 }
