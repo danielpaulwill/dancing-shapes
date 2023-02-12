@@ -4,13 +4,17 @@ function ShapeOne() {
   const [shapeCount, setShapeCount] = useState(1)
   const [shape, setShape] = useState()
 
+  const square = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/square.png"
+  const circle = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/circle.png"
+  const triangle = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/triangle.png"
+
   useEffect(() => {
     if (shapeCount === 1) {
-      setShape("square")
+      setShape(square)
     } else if (shapeCount === 2) {
-      setShape("circle")
+      setShape(circle)
     } else if (shapeCount === 3) {
-      setShape("triangle")
+      setShape(triangle)
     } else setShapeCount(1)
   }, [shapeCount])
 
@@ -19,9 +23,8 @@ function ShapeOne() {
   }
 
   return (
-    <div className='x'>
-      <div className={`${shape} y`} onClick={handleShapeClick}>
-      </div>
+    <div className='oneX' onClick={handleShapeClick}>
+      <img src={shape} className='oneY'></img>
     </div>
   );
 }

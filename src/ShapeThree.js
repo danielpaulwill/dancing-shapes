@@ -4,13 +4,17 @@ function ShapeThree() {
   const [shapeCount, setShapeCount] = useState(1)
   const [shape, setShape] = useState()
 
+  const pentagon = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/pentagon.png"
+  const heart = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/heart.png"
+  const rectangle = "https://raw.githubusercontent.com/danielpaulwill/dancing-shapes/main/src/assets/rectangle.png"
+
   useEffect(() => {
     if (shapeCount === 1) {
-      setShape("pentagon")
+      setShape(pentagon)
     } else if (shapeCount === 2) {
-      setShape("heart")
+      setShape(heart)
     } else if (shapeCount === 3) {
-      setShape("parallelogram")
+      setShape(rectangle)
     } else setShapeCount(1)
   }, [shapeCount])
 
@@ -19,7 +23,8 @@ function ShapeThree() {
   }
 
   return (
-    <div className={shape} onClick={handleShapeClick}>
+    <div className='threeX' onClick={handleShapeClick}>
+      <img src={shape} className='threeY'></img>
     </div>
   );
 }
